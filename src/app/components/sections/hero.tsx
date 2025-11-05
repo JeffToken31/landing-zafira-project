@@ -6,14 +6,12 @@ import { Button } from '../ui/Button';
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/hero-bg.jpg')" }}
       aria-label="Section d’introduction du projet Zafira"
     >
-      {/* Dégradé de superposition pour la lisibilité */}
       <div className="absolute inset-0 bg-black/40 z-0" />
 
-      {/* Bulles animées décoratives */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
           className="absolute -top-10 -left-10 w-60 h-60 rounded-full bg-pink-500 opacity-30"
@@ -42,14 +40,12 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Contenu principal */}
       <motion.div
         className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-10"
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        {/* Colonne texte */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-white">
           <Image
             src="/logo_zafira_carre__.jpg"
@@ -60,18 +56,18 @@ export default function HeroSection() {
           />
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#FF69B4] drop-shadow-md">
-            Redonner confiance par l’image
+            Redonner confiance par l’image.
           </h1>
 
           <h2 className="text-lg sm:text-xl md:text-2xl text-[#FFD700]/90 mt-4 mb-10">
-            Accompagnement à la réinsertion par l’image de soi
+            Accompagnement à la réinsertion par l’image de soi.
           </h2>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button
               variant="heroSection"
               size="lg"
-              href="https://ton-projet-deploye.com"
+              href="localhost:3000"
               className="bg-[#FF69B4] text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:bg-[#ff5ca4] transition"
             >
               Découvrir nos actions
@@ -79,12 +75,10 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Colonne mockups */}
         <div className="flex-1 flex flex-col items-center lg:items-end gap-6">
-          {/* Mockup PC */}
           <div className="w-full max-w-lg shadow-2xl rounded-xl overflow-hidden">
             <Image
-              src="/mockup_pc.png"
+              src="/mockup pc.png"
               alt="Aperçu de l’application Zafira sur ordinateur"
               width={800}
               height={600}
@@ -93,10 +87,9 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Mockup mobile */}
           <div className="w-32 sm:w-36 md:w-40 shadow-xl rounded-xl overflow-hidden">
             <Image
-              src="/mockup_mobile.png"
+              src="/mockup mobile.png"
               alt="Aperçu de l’application Zafira sur mobile"
               width={200}
               height={400}
