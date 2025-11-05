@@ -4,7 +4,7 @@ import * as React from 'react';
 import {Popover, PopoverTrigger, PopoverContent} from '@radix-ui/react-popover';
 import {Menu} from 'lucide-react';
 import {Button} from './ui/Button';
-import {cn} from '@/lib/cn';
+import {cn} from '../../lib/cn';
 
 export default function MobileMenu() {
   return (
@@ -14,6 +14,7 @@ export default function MobileMenu() {
           <Menu />
         </Button>
       </PopoverTrigger>
+
       <PopoverContent
         align="end"
         sideOffset={5}
@@ -23,22 +24,22 @@ export default function MobileMenu() {
         )}
       >
         <a
-          href="#actions"
+          href="#hero"
           className="text-text hover:text-primary transition-colors"
         >
-          Actions
+          Home
+        </a>
+        <a
+          href="#features"
+          className="text-text hover:text-primary transition-colors"
+        >
+          Features
         </a>
         <a
           href="#about"
           className="text-text hover:text-primary transition-colors"
         >
-          À propos
-        </a>
-        <a
-          href="#contact"
-          className="text-text hover:text-primary transition-colors"
-        >
-          Contact
+          About
         </a>
       </PopoverContent>
     </Popover>

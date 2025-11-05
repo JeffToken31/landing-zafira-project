@@ -4,9 +4,8 @@ import {HeartHandshake} from 'lucide-react';
 import MobileMenu from '../MobilMenu';
 
 export default function Navbar() {
-
   return (
-    <nav className="w-full px-6 py-4 flex items-center justify-between bg-bg shadow-md">
+    <nav className="w-full px-6 py-4 flex items-center justify-between bg-bg shadow-md fixed top-0 left-0 z-50">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
@@ -18,47 +17,29 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Desktop */}
+      {/* Desktop menu */}
       <div className="hidden md:flex items-center gap-6">
         <a
-          href="http://localhost:3000/"
+          href="#hero"
           className="text-text hover:text-primary transition-colors"
         >
-          Accueil
+          Home
         </a>
         <a
-          href="#mission"
+          href="#features"
           className="text-text hover:text-primary transition-colors"
         >
-          À propos
-        </a>{' '}
-        <a
-          href="#actions"
-          className="text-text hover:text-primary transition-colors"
-        >
-          Actions
-        </a>{' '}
-        <a
-          href="#blog"
-          className="text-text hover:text-primary transition-colors"
-        >
-          Actualitées
-        </a>{' '}
-        <a
-          href="#faq"
-          className="text-text hover:text-primary transition-colors"
-        >
-          Faq
+          Features
         </a>
         <a
-          href="#participation"
+          href="#about"
           className="text-text hover:text-primary transition-colors"
         >
-          Don
+          About
         </a>
       </div>
 
-      {/* Mobile */}
+      {/* Mobile menu */}
       <div className="md:hidden flex items-center gap-2">
         <MobileMenu />
       </div>
