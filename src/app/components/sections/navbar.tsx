@@ -6,7 +6,7 @@ import ThemeToggle from '../ThemeToggle';
 
 export default function Navbar() {
   return (
-    <nav className="w-full px-6 py-4 flex items-center justify-between bg-white dark:bg-black shadow-md fixed top-0 left-0 z-50">
+    <nav className="w-full px-6 py-4 flex items-center justify-between dark:bg-black fixed top-0 left-0 z-50">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
@@ -20,7 +20,7 @@ export default function Navbar() {
 
       {/* Middle section : Dark mode + navigation links */}
       <div className="hidden md:flex items-center gap-6">
-        <ThemeToggle /> {/* ← le bouton avant les liens */}
+        <ThemeToggle />
         <a
           href="#hero"
           className="text-text hover:text-primary transition-colors"
