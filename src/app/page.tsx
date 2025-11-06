@@ -1,11 +1,13 @@
 'use client';
-import HeroTest from './HeroTest';
+import HeroSection from './components/sections/hero';
+import AboutSection from './components/sections/about';
 import FeaturesSection from './components/sections/features';
 export default function Page() {
   return (
     <div>
-      <HeroTest />
+      <HeroSection />
       <FeaturesSection />
+      <AboutSection />
     </div>
   );
 }
