@@ -19,28 +19,27 @@ export default function MobileMenu() {
         align="end"
         sideOffset={5}
         className={cn(
-          'relative z-50 flex flex-col bg-white p-4 rounded-lg shadow-lg min-w-[180px]',
-          'space-y-3'
+          'relative z-50 flex flex-col bg-white dark:bg-black p-4 rounded-xl shadow-lg min-w-[180px]',
+          'space-y-4 border border-neutral-200 dark:border-neutral-800'
         )}
       >
-        <a
-          href="#hero"
-          className="text-text hover:text-primary transition-colors"
-        >
-          Home
-        </a>
-        <a
-          href="#features"
-          className="text-text hover:text-primary transition-colors"
-        >
-          Features
-        </a>
-        <a
-          href="#about"
-          className="text-text hover:text-primary transition-colors"
-        >
-          About
-        </a>
+        {[
+          {label: 'Home', href: '#hero'},
+          {label: 'Features', href: '#features'},
+          {label: 'About', href: '#about'},
+        ].map((link, index) => (
+          <a
+            key={index}
+            href={link.href}
+            className="
+              text-text font-medium transition-all duration-500
+              hover:bg-gradient-to-r hover:from-primary hover:via-cyan-400 hover:to-blue-500
+              hover:bg-clip-text hover:text-transparent
+            "
+          >
+            {link.label}
+          </a>
+        ))}
       </PopoverContent>
     </Popover>
   );
