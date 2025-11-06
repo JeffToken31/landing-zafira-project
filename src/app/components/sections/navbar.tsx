@@ -21,28 +21,28 @@ export default function Navbar() {
       {/* Middle section : Dark mode + navigation links */}
       <div className="hidden md:flex items-center gap-6">
         <ThemeToggle />
-        <a
-          href="#hero"
-          className="text-text hover:text-primary transition-colors"
-        >
-          Home
-        </a>
-        <a
-          href="#features"
-          className="text-text hover:text-primary transition-colors"
-        >
-          Features
-        </a>
-        <a
-          href="#about"
-          className="text-text hover:text-primary transition-colors"
-        >
-          About
-        </a>
+
+        {[
+          {label: 'Home', href: '#hero'},
+          {label: 'Features', href: '#features'},
+          {label: 'About', href: '#about'},
+        ].map((link, index) => (
+          <a
+            key={index}
+            href={link.href}
+            className="
+              text-text relative font-medium transition-all duration-500
+              hover:bg-gradient-to-r hover:from-primary hover:via-cyan-400 hover:to-blue-500
+              hover:bg-clip-text hover:text-transparent
+            "
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
 
       {/* Mobile menu */}
-      <div className="md:hidden flex items-center gap-2">
+      <div className="md:hidden flex items-center dark:bg-black gap-2">
         <ThemeToggle />
         <MobileMenu />
       </div>

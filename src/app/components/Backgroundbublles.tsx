@@ -205,7 +205,7 @@ export default function BackgroundBubbles() {
               width: `${b.size}px`,
               height: `${b.size}px`,
               backgroundColor: b.color,
-              ['--bubble-color' as any]: b.color,
+              ['--bubble-color' as string]: b.color,
             } as React.CSSProperties
           }
           animate={{

@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import {Slot} from '@radix-ui/react-slot';
 import {cva, type VariantProps} from 'class-variance-authority';
@@ -8,7 +10,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-white text-primary-foreground hover:bg-bg-alt',
+        default:
+          'bg-white text-primary-foreground hover:bg-bg-alt dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800',
         connect: 'bg-secondary text-white hover:bg-secondary-hover',
         rose: 'bg-primary text-text hover:bg-primary-hover hover:text-white',
         bleu: 'bg-secondary text-text hover:bg-secondary-hover hover:text-white',
@@ -45,32 +48,37 @@ const buttonVariants = cva(
   }
 );
 
-interface ButtonProps
-  extends React.ComponentProps<'button'>,
-    VariantProps<typeof buttonVariants> {
+type ButtonBaseProps = VariantProps<typeof buttonVariants> & {
   asChild?: boolean;
   href?: string;
-}
+  className?: string;
+};
 
-function Button({
-  className,
-  variant,
-  size,
-  asChild = false,
-  href,
-  ...props
-}: ButtonProps) {
-  // If href is used button is an <a>
-  const Comp = href ? 'a' : asChild ? Slot : 'button';
+type ButtonProps =
+  | (ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement>)
+  | (ButtonBaseProps & React.AnchorHTMLAttributes<HTMLAnchorElement>);
+
+const Button = React.forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  ButtonProps
+>(({className, variant, size, asChild = false, href, ...props}, ref) => {
+  const Comp: React.ElementType = href ? 'a' : asChild ? Slot : 'button';
+
+  const componentRef = ref as
+    | React.Ref<HTMLButtonElement>
+    | React.Ref<HTMLAnchorElement>;
 
   return (
     <Comp
+      ref={componentRef}
       data-slot="button"
       className={cn(buttonVariants({variant, size, className}))}
       {...(href ? {href} : {})}
       {...props}
     />
   );
-}
+});
+
+Button.displayName = 'Button';
 
 export {Button, buttonVariants};
