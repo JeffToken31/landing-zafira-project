@@ -56,10 +56,10 @@ export default function HeroSection() {
 
         <div className="flex-1 flex flex-col items-center gap-4">
           <div className="w-full max-w-md shadow-xl rounded-xl overflow-hidden">
-            <img src="/mockup_pc.png" alt="Mockup PC" className="w-full" />
+            <img src="/mockup pc.png" alt="Mockup PC" className="w-full" />
           </div>
           <div className="w-32 sm:w-36 md:w-40 shadow-lg rounded-xl overflow-hidden">
-            <img src="/mockup_mobile.png" alt="Mockup Mobile" className="w-full" />
+            <img src="/mockup mobile.png" alt="Mockup Mobile" className="w-full" />
           </div>
         </div>
 
