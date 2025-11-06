@@ -18,14 +18,15 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-
+        <br /><br />
+        <br /><br />
         <div className="flex-1 flex flex-col items-center lg:items-start mb-6 lg:mb-0">
           <img src="/logozafira.jpg" alt="Logo Zafira" className="w-48 sm:w-52 md:w-56 mb-4" />
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FF69B4] text-center lg:text-left">
-            Redonner confiance par l’image
+            Quand la technologie soutient la solidarité
           </h1>
           <h2 className="text-lg sm:text-xl md:text-2xl text-[#FFD700]/90 mt-4 mb-8 text-center lg:text-left">
-            Accompagnement à la réinsertion par l’image de soi
+            Zafira Solidaire est un projet né d’une collaboration entre développeurs et une association engagée. Une plateforme conçue pour redonner confiance, valoriser l’image de soi et renforcer les liens humains grâce au digital.
           </h2>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 300 }}
