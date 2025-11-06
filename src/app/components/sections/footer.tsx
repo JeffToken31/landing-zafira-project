@@ -4,7 +4,7 @@ import {SiGithub, SiLinkedin} from 'react-icons/si';
 
 export default function Footer() {
   return (
-    <footer className="bg-background text-foreground py-12 transition-colors duration-300">
+    <footer className="bg-background text-foreground pb-12 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-12 text-center md:text-left">
         {/* Project Info */}
         <div className="flex flex-col items-center gap-2 md:flex-1">

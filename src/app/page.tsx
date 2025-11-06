@@ -1,8 +1,13 @@
 'use client';
 
-import HeroTest from "./HeroTest"; //To test my Hero section
+import HeroTest from './HeroTest';
+import FeaturesSection from './components/sections/features';
 
-
-export default function Page() { // Temporary page to test the Hero section
-  return <HeroTest />;
+export default function Page() {
+  return (
+    <div>
+      <HeroTest />
+      <FeaturesSection />
+    </div>
+  );
 }
