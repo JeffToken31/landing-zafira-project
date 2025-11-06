@@ -1,9 +1,14 @@
 'use client';
 import Image from "next/image";
-import HeroTest from "./HeroTest"; //To test my Hero section
-
-export default function Page() { // Temporary page to test the Hero section
-  return <HeroTest />;
+import HeroSection from "./components/sections/hero";
+import AboutSection from "./components/sections/about";
+export default function Page() {
+  return (
+    <main className="bg-white dark:bg-black">
+     <HeroSection />;
+     <AboutSection />;
+    </main>
+  );
 }
 
 function Home() {
@@ -57,7 +62,11 @@ function Home() {
             Deploy Now
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
+            className="
+              flex h-12 w-full items-center justify-center rounded-full border border-solid
+              border-black/8 px-5 transition-colors hover:border-transparent 
+              hover:bg-black/4 dark:border-white/[.145] 
+              dark:hover:bg-[#1a1a1a] md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
