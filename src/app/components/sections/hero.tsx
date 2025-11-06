@@ -36,7 +36,7 @@ export default function HeroSection() {
       >
 
         <div className="flex-1 flex flex-col items-center lg:items-start mb-6 lg:mb-0">
-          <img src="/logo_zafira_carre__.jpg" alt="Logo Zafira"
+          <img src="/logozafira.jpg" alt="Logo Zafira"
             className="w-48 sm:w-52 md:w-56 mb-4"
           />
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FF69B4] text-center lg:text-left">
