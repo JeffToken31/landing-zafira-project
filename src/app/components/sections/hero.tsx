@@ -36,7 +36,7 @@ export default function HeroSection() {
       >
 
         <div className="flex-1 flex flex-col items-center lg:items-start mb-6 lg:mb-0">
-          <img src="/logo_zafira_carre__.jpg" alt="Logo Zafira"
+          <img src="/logozafira.jpg" alt="Logo Zafira"
             className="w-48 sm:w-52 md:w-56 mb-4"
           />
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FF69B4] text-center lg:text-left">
@@ -56,10 +56,10 @@ export default function HeroSection() {
 
         <div className="flex-1 flex flex-col items-center gap-4">
           <div className="w-full max-w-md shadow-xl rounded-xl overflow-hidden">
-            <img src="/mockup_pc.png" alt="Mockup PC" className="w-full" />
+            <img src="/mockup pc.png" alt="Mockup PC" className="w-full" />
           </div>
           <div className="w-32 sm:w-36 md:w-40 shadow-lg rounded-xl overflow-hidden">
-            <img src="/mockup_mobile.png" alt="Mockup Mobile" className="w-full" />
+            <img src="/mockup mobile.png" alt="Mockup Mobile" className="w-full" />
           </div>
         </div>
 
