@@ -4,11 +4,13 @@ import {SiGithub, SiLinkedin} from 'react-icons/si';
 
 export default function Footer() {
   return (
-    <footer className="bg-background text-foreground pb-12 transition-colors duration-300">
+    <footer className="bg-background text-neutral-500 dark:text-white pb-12 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-12 text-center md:text-left">
         {/* Project Info */}
         <div className="flex flex-col items-center gap-2 md:flex-1">
-          <h3 className="font-bold text-lg mb-1">Zafira Landing Page</h3>
+          <h3 className="font-bold text-neutral-600 dark:text-white text-lg mb-1">
+            Zafira Landing Page
+          </h3>
           <p className="text-sm opacity-80">
             Portfolio Project for Holberton School
           </p>
@@ -26,8 +28,10 @@ export default function Footer() {
         </div>
 
         {/* Developers */}
-        <div className="flex flex-col items-center gap-4 md:flex-1">
-          <h3 className="font-bold text-lg mb-2">Developers</h3>
+        <div className="flex flex-col items-center dark:text-white gap-4 md:flex-1">
+          <h3 className="font-bold text-neutral-600 dark:text-white text-lg mb-2">
+            Developers
+          </h3>
           <ul className="flex gap-6 justify-center">
             {[
               {
@@ -69,7 +73,9 @@ export default function Footer() {
 
         {/* School Info */}
         <div className="flex flex-col items-center gap-2 md:flex-1">
-          <h3 className="font-bold text-lg mb-2">Holberton School</h3>
+          <h3 className="font-bold text-neutral-600 dark:text-white text-lg mb-2">
+            Holberton School
+          </h3>
           <a
             href="https://www.holbertonschool.fr/"
             target="_blank"
