@@ -19,7 +19,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100">
+    <section id="about" className="py-20 text-zinc-800 dark:text-zinc-100">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-8">About the project</h2>
         <p className="text-lg leading-relaxed semibold mb-12">
