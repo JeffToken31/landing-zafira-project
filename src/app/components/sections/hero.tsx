@@ -5,7 +5,10 @@ import {Button} from '../ui/Button';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[100vh] flex flex-col lg:flex-row items-center justify-center overflow-hidden bg-white dark:bg-black">
+    <section
+      id="hero"
+      className="relative min-h-[100vh] flex flex-col lg:flex-row items-center justify-center overflow-hidden bg-white dark:bg-black"
+    >
       {/* Arrière-plan animé */}
       <div className="absolute inset-0 z-0">
         <motion.div

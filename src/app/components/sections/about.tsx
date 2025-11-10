@@ -33,6 +33,7 @@ export default function AboutSection() {
       ref={ref}
       className="relative py-24 overflow-hidden flex flex-col items-center text-center text-neutral-500 dark:text-zinc-100"
       initial="hidden"
+      id="about"
       animate={controls}
       variants={{
         hidden: {opacity: 0, y: 80},
